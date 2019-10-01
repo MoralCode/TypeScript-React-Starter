@@ -10,10 +10,10 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
       
-    - name: Yarn
-      run: |
-        yarn install
-        yarn run deploy
+#     - name: Yarn
+#       run: |
+#         yarn install
+#         yarn run deploy
 
     - name: Build and Deploy
       uses: JamesIves/github-pages-deploy-action@master
@@ -22,4 +22,4 @@ jobs:
         BASE_BRANCH: master # The branch the action should deploy from.
         BRANCH: master # The branch the action should deploy to.
         FOLDER: build # The folder the action should deploy.
-        BUILD_SCRIPT: yarn install && yarn build # The build script the action should run prior to deploying.
+        BUILD_SCRIPT: yarn install && yarn run deploy # The build script the action should run prior to deploying.
