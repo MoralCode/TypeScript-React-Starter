@@ -1,5 +1,6 @@
 {
   "name": "test",
+  "homepage": "http://moralcode.github.io/TypeScript-React-Starter/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
