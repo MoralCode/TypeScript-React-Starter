@@ -20,9 +20,7 @@ jobs:
           cd build/;
           git init;
           git remote add origin http://github.com/$GITHUB_REPOSITORY.git;
-          git branch -u origin/gh-pages
-          git checkout gh-pages;
-          git pull;
+          git pull -u origin gh-pages;
           git status;
           yarn install && yarn build;
           git add -A;
@@ -30,7 +28,7 @@ jobs:
           git config user.name $GITHUB_ACTOR;
           git config user.email $GITHUB_ACTOR@users.noreply.github.com;
           git commit -m "Deploy $GITHUB_SHA"
-          git push https://$ACCESS_TOKEN@github.com/$GITHUB_REPOSITORY.git gh-pages:gh-pages;
+          git push https://$ACCESS_TOKEN@github.com/$GITHUB_REPOSITORY.git master:gh-pages;
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 #     - name: GitHub Pages Deploy
