@@ -10,6 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: set env varr
+      run: echo "hash"
       env:
         REACT_APP_GIT_SHA: GITHUB_SHA 
     - name: Run a multi-line script
