@@ -14,8 +14,8 @@ jobs:
       env:
         REACT_APP_GIT_SHA: GITHUB_SHA 
     - name: Run a multi-line script
-      run: |
-        yarn install && yarn build
-        cd build/
+      run: yarn install && yarn build
     - name: GitHub Pages Deploy
       uses: maxheld83/ghpages@v0.2.1
+      env:
+        BUILD_DIR: build/
