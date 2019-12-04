@@ -23,6 +23,7 @@ jobs:
           git remote add origin http://github.com/$GITHUB_REPOSITORY.git
           git pull origin gh-pages
           git status
+          yarn install && yarn build
           git add -A
           git status
           git config user.name $GITHUB_ACTOR
