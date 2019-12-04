@@ -21,12 +21,12 @@ jobs:
           git init
           git checkout -b gh_pages
           git remote add origin http://github.com/$GITHUB_REPOSITORY.git
-          git pull origin gh_pages
+          git pull origin gh-pages
           git add  
           git config user.name $GITHUB_ACTOR
           git config user.email $GITHUB_ACTOR@users.noreply.github.com
           git commit -m "Deploy $GITHUB_SHA"
-          git push https://$ACCESS_TOKEN@github.com/$GITHUB_REPOSITORY.git gh_pages:gh_pages
+          git push https://$ACCESS_TOKEN@github.com/$GITHUB_REPOSITORY.git gh_pages:gh-pages
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 #     - name: GitHub Pages Deploy
