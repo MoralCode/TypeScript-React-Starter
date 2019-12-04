@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: set env varr
-      run: echo ${{ secrets }} 
+      run: echo ${{ $GITHUB_SHA }} 
         
 #     - name: Run a multi-line script
 #       run: yarn install && yarn build
