@@ -10,17 +10,35 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v1
-#     - name: set env varr
-#       run: echo ${{ github.SHA }} 
+    - name: Copy CNAME
+      run: mkdir -p build/; cp ./CNAME ./build/CNAME
+    - name: Build app
+      run: yarn install && yarn build
         
-#     - name: Run a multi-line script
-#       run: yarn install && yarn build
-    - name: Build and Deploy
-      uses: JamesIves/github-pages-deploy-action@master
+    - name: Run a multi-line script
+      run: |
+          cd build/
+          git init
+          git checkout -b gh_pages
+          git remote add origin http://github.com/$(GITHUB_REPOSITORY).git
+          git pull origin gh_pages
+          git add  
+          git config user.name $(GITHUB_ACTOR)
+          git config user.email $(GITHUB_ACTOR)@users.noreply.github.com
+          git commit -m "Deploy $GITHUB_SHA"
+          git push https://$(ACCESS_TOKEN)@github.com/$(GITHUB_REPOSITORY).git gh_pages:gh_pages
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BASE_BRANCH: master # The branch the action should deploy from.
-        BRANCH: gh-pages # The branch the action should deploy to.
-        FOLDER: build # The folder the action should deploy.
-        REACT_APP_GIT_SHA: ${{ github.SHA }} 
-        BUILD_SCRIPT: yarn install && yarn build # The build script the action should run prior to deploying.
+#     - name: GitHub Pages Deploy
+#       uses: maxheld83/ghpages@v0.2.1
+#       env:
+#         BUILD_DIR: build/
+#     - name: Build and Deploy
+#       uses: JamesIves/github-pages-deploy-action@master
+#       env:
+#         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+#         BASE_BRANCH: master # The branch the action should deploy from.
+#         BRANCH: gh-pages # The branch the action should deploy to.
+#         FOLDER: build # The folder the action should deploy.
+#         REACT_APP_GIT_SHA: ${{ github.SHA }} 
+#         BUILD_SCRIPT: yarn install && yarn build # The build script the action should run prior to deploying.
