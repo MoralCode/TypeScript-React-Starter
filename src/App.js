@@ -10,6 +10,7 @@ function App() {
         <p>
           BRUUUUUUUUUUheeeeeeeeeeeeeeeee
         </p>
+        <p>{process.env.REACT_APP_GIT_SHA}</p>
         <a
           className="App-link"
           href="https://reactjs.org"
