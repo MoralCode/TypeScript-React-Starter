@@ -10,8 +10,8 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v1
-    - name: Copy CNAME
-      run: ls -l;mkdir -p build/; cp ./CNAME ./build/CNAME
+#     - name: Copy CNAME
+#       run: mkdir -p build/; cp ./CNAME ./build/CNAME
     - name: Build app
       run: yarn install && yarn build
         
