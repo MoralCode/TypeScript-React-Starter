@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-    console.log(process.env)
+    const sha = process.env.REACT_APP_GIT_SHA;
   return (
     <div className="App">
       <header className="App-header">
@@ -11,7 +11,7 @@ function App() {
         <p>
           BRUUUUUUUUUUheeeeeeeeeeeeeeeee
         </p>
-        <p>{process.env.SHA}</p>
+              <p>{sha}</p>
         <a
           className="App-link"
           href="https://reactjs.org"
