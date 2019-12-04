@@ -9,8 +9,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: export REACT_APP_GIT_SHA=`git rev-parse --short HEAD`
+    - name: set env varr
+      env:
+        REACT_APP_GIT_SHA: GITHUB_SHA 
 #     - name: Run a multi-line script
 #       run: |
 #         echo Add other actions to build,
