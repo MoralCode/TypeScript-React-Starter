@@ -18,7 +18,7 @@ jobs:
     - name: Run a multi-line script
       run: |
           cd build/;
-          git init;
+          ;
           git remote add origin http://github.com/$GITHUB_REPOSITORY.git;
           git branch --set-upstream-to origin/gh-pages;
           git pull;
