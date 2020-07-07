@@ -36,3 +36,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
+        env:
+          REACT_APP_GIT_SHA: ${{ github.SHA }}
