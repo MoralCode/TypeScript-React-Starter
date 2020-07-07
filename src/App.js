@@ -9,7 +9,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          BRUUUUUUUUUUheeeeeeeeeeeeeeeee
+          This is a test to see if it really works
         </p>
               <p>{sha}</p>
         <a
