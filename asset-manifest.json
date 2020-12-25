@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/TypeScript-React-Starter/static/css/main.b100e6da.chunk.css",
+    "main.js": "/TypeScript-React-Starter/static/js/main.fb6d4cec.chunk.js",
+    "main.js.map": "/TypeScript-React-Starter/static/js/main.fb6d4cec.chunk.js.map",
+    "runtime-main.js": "/TypeScript-React-Starter/static/js/runtime-main.d21c830e.js",
+    "runtime-main.js.map": "/TypeScript-React-Starter/static/js/runtime-main.d21c830e.js.map",
+    "static/js/2.1ebe39b8.chunk.js": "/TypeScript-React-Starter/static/js/2.1ebe39b8.chunk.js",
+    "static/js/2.1ebe39b8.chunk.js.map": "/TypeScript-React-Starter/static/js/2.1ebe39b8.chunk.js.map",
+    "index.html": "/TypeScript-React-Starter/index.html",
+    "precache-manifest.481cf0d71e55b8ab3175f4995851d609.js": "/TypeScript-React-Starter/precache-manifest.481cf0d71e55b8ab3175f4995851d609.js",
+    "service-worker.js": "/TypeScript-React-Starter/service-worker.js",
+    "static/css/main.b100e6da.chunk.css.map": "/TypeScript-React-Starter/static/css/main.b100e6da.chunk.css.map",
+    "static/media/logo.svg": "/TypeScript-React-Starter/static/media/logo.25bf045c.svg"
+  }
+}
